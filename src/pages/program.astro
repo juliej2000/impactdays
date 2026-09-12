@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../css/main.css'
-import {Images} from '../indhold/billeder';
 
 ---
 
@@ -31,13 +30,13 @@ import {Images} from '../indhold/billeder';
                
 
                 <div class="hero-buttons">
-                    <a href="#program" class="button button-dark">
+                    <button type="button" class="button button-dark date-button active" data-day="friday">
                         FRIDAY 11 SEP
-                    </a>
+                    </button>
 
-                    <a href="#program" class="text-button">
+                    <button type="button" class="text-button date-button" data-day="saturday">
                         SATURDAY 12 SEP
-                    </a>
+                    </button>
                 </div>
 
                 
@@ -61,7 +60,7 @@ import {Images} from '../indhold/billeder';
 
         </section>
 
-        <section class="program">
+        <section class="program" id="program">
 
     <!-- ALL -->
     <div class="program-item">
@@ -109,28 +108,28 @@ import {Images} from '../indhold/billeder';
         <div class="program-content talks">
 
             <div class="event">
-                <span class="time">16:00</span>
-                <span class="event-name">FUTURE MEDIA (DA)</span>
+                <span class="time" data-friday="16:00" data-saturday="12:00">16:00</span>
+                <span class="event-name" data-friday="FUTURE MEDIA (DA)" data-saturday="CREATIVE CITIES (EN)">FUTURE MEDIA (DA)</span>
             </div>
 
             <div class="event">
-                <span class="time">16:30</span>
-                <span class="event-name">UNLOCKING LOCAL IMPACT (EN)</span>
+                <span class="time" data-friday="16:30" data-saturday="12:30">16:30</span>
+                <span class="event-name" data-friday="UNLOCKING LOCAL IMPACT (EN)" data-saturday="DESIGNING FOR CHANGE (EN)">UNLOCKING LOCAL IMPACT (EN)</span>
             </div>
 
             <div class="event">
-                <span class="time">17:00</span>
-                <span class="event-name">FUTURE FISHING (EN)</span>
+                <span class="time" data-friday="17:00" data-saturday="13:00">17:00</span>
+                <span class="event-name" data-friday="FUTURE FISHING (EN)" data-saturday="THE POWER OF COMMUNITY (DA)">FUTURE FISHING (EN)</span>
             </div>
 
             <div class="event">
-                <span class="time">17:30</span>
-                <span class="event-name">THE IMPACT OF SOUND (EN)</span>
+                <span class="time" data-friday="17:30" data-saturday="13:30">17:30</span>
+                <span class="event-name" data-friday="THE IMPACT OF SOUND (EN)" data-saturday="MUSIC AS ACTIVISM (EN)">THE IMPACT OF SOUND (EN)</span>
             </div>
 
             <div class="event">
-                <span class="time">18:00</span>
-                <span class="event-name">ACTIVISM THROUGH CRAFT (EN)</span>
+                <span class="time" data-friday="18:00" data-saturday="14:00">18:00</span>
+                <span class="event-name" data-friday="ACTIVISM THROUGH CRAFT (EN)" data-saturday="FOOD, CULTURE &amp; FUTURE (EN)">ACTIVISM THROUGH CRAFT (EN)</span>
             </div>
 
         </div>
@@ -330,12 +329,23 @@ import {Images} from '../indhold/billeder';
 }
 
 .text-button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
     font-size: 12px;
     font-weight: 600;
 
     border-bottom: 1px solid #111;
 
     padding-bottom: 2px;
+}
+
+.date-button.active {
+    opacity: 1;
+}
+
+.date-button:not(.active) {
+    opacity: 0.55;
 }
 
 
