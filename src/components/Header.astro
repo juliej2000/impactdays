@@ -7,7 +7,7 @@
                         src="indhold/logo/IDBW.webp"
                         alt="Impact Days logo"
                     >
-        </a>
+    </a>
 
         <nav class="main-nav" id="mainNav">
             <a href="#about">ABOUT</a>
@@ -19,22 +19,11 @@
         <!-- <a href="/program" class="text-button"></a> -->
 
         <div class="header-actions">
-            <button class="search-button" aria-label="Søg">
-                <svg viewBox="0 0 24 24">
-                    <circle cx="11" cy="11" r="6"></circle>
-                    <path d="M16 16L21 21"></path>
-                </svg>
-            </button>
+            <img
+                        src="indhold/some/search.webp"
+                        alt="search icon"
+                    >
 
-            <!-- <button
-                class="menu-button"
-                id="menuButton"
-                aria-label="Åbn menu"
-                aria-expanded="false"
-            >
-                <span>-</span>
-                <span>-</span>
-            </button> -->
         </div>
 
         <style>
@@ -111,6 +100,13 @@
     display: flex;
     gap: 18px;
     align-items: center;
+}
+
+.header-actions img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
 }
 
 .search-button,
