@@ -1,6 +1,6 @@
 
 @font-face {
-    font-family: "Inter";
+    font-family: "Inter Normal";
     src: url("../../fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
     font-style: normal;
     font-weight: 100 900;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: "Inter";
+    font-family: "Inter Italic";
     src: url("../../fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
     font-style: italic;
     font-weight: 100 900;
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-    font-family: "Noto Sans";
+    font-family: "Noto Sans Normal";
     src: url("../../fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
     font-style: normal;
     font-weight: 100 900;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: "Noto Sans";
+    font-family: "Noto Sans Italic";
     src: url("../../fonts/NotoSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
     font-style: italic;
     font-weight: 100 900;
