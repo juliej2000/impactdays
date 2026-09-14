@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../css/main.css'
+import heroVideo from '../../indhold/herovideo.mp4';
 
 ---
 
@@ -47,10 +48,17 @@ import '../css/main.css'
             <div class="hero-image-wrapper">
 
                 <div class="hero-image">
-                    <img
-                        src="indhold/heroimg.png"
-                        alt="People attending Impact Days"
+                    <video
+                        class="hero-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        aria-label="People attending Impact Days"
                     >
+                        <source src={heroVideo} type="video/mp4">
+                        Din browser understøtter ikke videotagget.
+                    </video>
 
                     <div class="hero-image-overlay"></div>
 
@@ -377,7 +385,8 @@ import '../css/main.css'
     position: relative;
 }
 
-.hero-image img {
+.hero-image img,
+.hero-video {
     width: 100%;
     height: 100%;
 
@@ -525,52 +534,6 @@ import '../css/main.css'
 
 .ticket-button:hover {
     background-color: #444;
-}
-
-
-/* --------------------
-   MOBILE
--------------------- */
-
-@media (max-width: 600px) {
-
-    .program {
-        padding: 0 10px;
-    }
-
-    .program-header {
-        padding: 15px 8px;
-        font-size: 16px;
-    }
-
-    .icon {
-        font-size: 21px;
-    }
-
-    .program-content {
-        padding: 12px;
-    }
-
-    .talks {
-        padding: 15px 10px 5px;
-    }
-
-    .event {
-        grid-template-columns: 50px 1fr;
-    }
-
-    .event-name {
-        padding-left: 18px;
-        font-size: 10px;
-    }
-
-    .time {
-        font-size: 7px;
-    }
-
-    .tickets {
-        margin-top: 35px;
-    }
 }
 
 </style>
