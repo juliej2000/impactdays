@@ -430,19 +430,22 @@ import {Images} from '../indhold/billeder';
     position: relative;
     z-index: 3;
 
-     margin-top: 50px;
+     margin-top: -15px;
 }
 
 .eyebrow {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.4;
 
-    letter-spacing: 0.65px;
+    letter-spacing: 1px;
     font-weight: 500;
 
     text-transform: uppercase;
 
     font-family: "Noto Sans Normal";
+
+    margin-bottom: 25px;
+    margin-left: 4px;
 }
 
 
@@ -479,8 +482,9 @@ import {Images} from '../indhold/billeder';
 
 .hero-intro {
     margin-top: 28px;
+    margin-bottom: 40px;
 
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.3px;
 
@@ -491,9 +495,10 @@ import {Images} from '../indhold/billeder';
 /* Description */
 
 .hero-description {
-     max-width: 350px;
+    max-width: 350px;
 
     margin-top: 13px;
+    margin-bottom: 30px;
 
     font-size:14px;
     line-height: 1.45;
@@ -569,7 +574,7 @@ import {Images} from '../indhold/billeder';
 
 .hero-meta {
     display: flex;
-    gap: 40px;
+    gap: 70px;
 
     margin-top: 43px;
 
@@ -629,18 +634,6 @@ import {Images} from '../indhold/billeder';
     object-position: center;
 
     filter: saturate(0.9);
-}
-
-.hero-image-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 80, 150, 0.04),
-            rgba(0, 0, 0, 0.06)
-        );
 }
 
 
@@ -710,7 +703,7 @@ import {Images} from '../indhold/billeder';
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: fit;
 
     transition:
         transform 0.6s cubic-bezier(.2,.7,.2,1),
